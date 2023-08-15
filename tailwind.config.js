@@ -5,7 +5,11 @@ module.exports = {
     './src/**/*.html', // Add other file paths as needed
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'abhaya': ['Abhaya Libre', 'serif']
+      }
+    },
   },
   plugins: [],
 }

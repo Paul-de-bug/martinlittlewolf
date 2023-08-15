@@ -7,9 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Martin Littlewolf</title>
     <link rel="stylesheet" href="./styles/build.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap" rel="stylesheet">
 </head>
 
-<body class="">
+<body class="font-abhaya">
 
     <!-- Header Section -->
     <header class="flex flex-col items-center justify-center border-b-2 border-black pb-2">
@@ -18,26 +21,40 @@
         </a>
     </header>    
 
-    <!-- Image Section (For your book or any other image) -->
-    <section class="m-12 pb-2">
-        <img src="./assets/3 wise.png" width="300" alt="Description of Image" class="mb-4">
-    </section>
+    <main class="m-12 flex justify-center items-center">
 
-    <!-- Text Section (About your book or any other content) -->
-    <section class="">
-        <p class="">Your text goes here...</p>
-    </section>
+        <div class="myclass flex">
+            <div class="w-1/2">
+                <!-- Image Section  -->
+                <section class="pb-2">
+                    <img src="./assets/test3.png" width="600" alt="Description of Image" class="mb-4">
+                </section>
+            </div>
 
-    <!-- Solutions Section -->
-    <section class="">
-        <h2 class="">Solutions</h2>
-        <p class=""><a href="path-to-pdf.pdf" class="" download>Download All Solutions as PDF</a></p>
-        <p class=""><a href="path-to-individual-solution-page.html" class="">Find a particular solution</a></p>
-    </section>
+            <div class="ml-12 w-1/2">
+                <!-- Text Section (About your book or any other content) -->
+                <section class="max-w-xl mt-12">
+                    <h2 class="text-3xl font-bold text-center mb-4">The Life of Jesus</h2>
+                    <p class="text-xl">Thank you for visiting my site. I hope you are enjoying my book. Below you can access the solutions, either by downloading all the solutions as a single pdf, or by looking for a particular solution.</p>
+                </section>
+
+                <!-- Solutions Section -->
+                <section class="mt-24">
+                    <h2 class="text-center pb-2 text-2xl font-bold">Solutions</h2>
+                    <p class="flex items-center justify-between max-w-xl">                
+                        <span class="w-1/2 mr-4"><a href="path-to-pdf.pdf" class="text-xl text-center justify-center flex border-black border-2 p-2 hover:bg-gray-300" download>Download all solutions as PDF</a></span>
+                        <span class="w-1/2"><a href="path-to-individual-solution-page.html" class="text-xl text-center justify-center flex border-black border-2 p-2 hover:bg-gray-300">Find a particular solution</a></span>
+                    </p>
+                </section>
+            </div>
+
+        </div>
+
+    </main>
 
     <!-- Footer (Optional) -->
-    <footer class="">
-        <p class="">© 2023 by Martin Littlewolf</p>
+    <footer class="border-t-2 border-black pb-2">
+        <p class="text-center mt-10">© 2023 by Martin Littlewolf</p>
     </footer>
 
 </body>
