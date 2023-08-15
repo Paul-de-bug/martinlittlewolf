@@ -570,6 +570,10 @@ video {
   width: 50%;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .max-w-xl {
   max-width: 36rem;
 }
@@ -580,6 +584,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -649,4 +657,22 @@ video {
 .hover\:bg-gray-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 768px) {
+  .md\:ml-12 {
+    margin-left: 3rem;
+  }
+
+  .md\:mt-24 {
+    margin-top: 6rem;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
+  }
 }
