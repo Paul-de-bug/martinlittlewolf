@@ -559,8 +559,20 @@ video {
   margin-bottom: 1rem;
 }
 
+.ml-8 {
+  margin-left: 2rem;
+}
+
+.ml-12 {
+  margin-left: 3rem;
+}
+
 .flex {
   display: flex;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .flex-col {
@@ -577,6 +589,23 @@ video {
 
 .justify-items-center {
   justify-items: center;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
 }
 
 .text-center {
