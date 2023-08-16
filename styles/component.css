@@ -1,0 +1,4 @@
+.listitem {
+    @apply p-2 cursor-pointer hover:font-bold hover:underline transition ease-in duration-300;
+  }
+  
