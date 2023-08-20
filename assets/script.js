@@ -100,6 +100,8 @@ document.getElementById('prevBtn').onclick = function() {
     if (currentImage > 1) {
         currentImage--;
         updateImage();
+        // Update dropdown value
+        document.getElementById('imageDropdown').value = currentImage;
     }
 };
 
@@ -107,6 +109,8 @@ document.getElementById('nextBtn').onclick = function() {
     if (currentImage < imageCount) {
         currentImage++;
         updateImage();
+        // Update dropdown value
+        document.getElementById('imageDropdown').value = currentImage;
     }
 };
 
