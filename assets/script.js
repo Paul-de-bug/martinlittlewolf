@@ -1,5 +1,5 @@
 const imageCount = 72; // Total number of images
-let currentImage = 2;  // Start from the second image
+let currentImage = 1;  // Start from the second image
 
 const imageTitles = [
     "Annunciation to Mary",
