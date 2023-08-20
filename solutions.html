@@ -19,21 +19,32 @@
             <img src="./assets/logoblack.png" width="300" alt="Description of Image" class="mb-4">
         </a>
         <div class="navigation flex flex-col-6 -mt-12">
+
             <button id="prevBtn" class="invisible md:visible text-xl md:mr-16 mr-4 md:text-2xl hover:font-bold hover:underline transition ease-in duration-300 w-1/6">Previous</button>
 
-            <aside class="md:w-96 w-full mb-4 border-2 border-black justify-center w-4/6">
+            <aside class="w-full mb-4 border-2 border-black justify-center w-4/6">
                 <select id="imageDropdown" class="p-4 w-full text-2xl hover:bg-customGray transition ease-in duration-300 cursor-pointer outline-none ">
                 </select>
             </aside>
 
             <button id="nextBtn" class="invisible md:visible text-xl md:ml-16 ml-4 md:text-2xl hover:font-bold hover:underline transition ease-in duration-300 w-1/6">Next</button>
         </div>
+       
     </header>    
 
+  
+    <div class="flex justify-center md:justify-end md:mr-10 mt-4"> 
+        <button onclick="printCurrentImage()" class="text-2xl hover:font-bold hover:underline transition ease-in duration-300 relative z-10">
+            <img src="./assets/printer-svgrepo-com.svg" width="75" alt="Description of Image" class="">
+        </button>
+    </div>
+
+
     <main class="mx-auto flex justify-center items-center">
+        
 
         <div class="container flex">    
-            <div class="slideshow md:-my-32 z-0">
+            <div class="slideshow -my-12 md:-my-48 lg:-my-56 z-0">
                 <img src="" alt="Slideshow Image" id="slideshowImage" class="relative z-0">
             </div>
         </div>

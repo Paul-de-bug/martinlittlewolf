@@ -125,3 +125,20 @@ window.onload = function() {
     populateDropdown();
     updateImage();
 };
+
+// Print setup
+function printCurrentImage() {
+    const imageSrc = document.getElementById('slideshowImage').src;
+
+    const printWindow = window.open('', '_blank');
+    printWindow.document.write('<html><head><title>Print</title></head><body>');
+    printWindow.document.write('<img src="' + imageSrc + '" width="100%">');
+    printWindow.document.write('</body></html>');
+    printWindow.document.close();
+    
+    // Use setTimeout to ensure content is fully loaded before invoking print
+    setTimeout(function() {
+        printWindow.print();
+    }, 500);
+}
+
