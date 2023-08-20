@@ -1,4 +1,4 @@
-const imageCount = 72; // Total number of images
+const imageCount = 72 // Total number of images
 let currentImage = 1;  // Start from the second image
 
 const imageTitles = [
@@ -84,15 +84,30 @@ function updateImage() {
     imgElement.src = `./assets/Solutions/${currentImage}.png`; 
 }
 
+
 function populateDropdown() {
     const dropdown = document.getElementById('imageDropdown');
-    for (let i = 1; i <= imageCount; i++) {
+    
+    // Create the default "Select" option
+    const defaultOption = document.createElement('option');
+    defaultOption.value = 1; // Set value to 1 for the splash page
+    defaultOption.textContent = "Select";
+    defaultOption.selected = true; // Set as default
+    dropdown.appendChild(defaultOption);
+
+    // Start the loop from 1 after "Select"
+    for (let i = 1; i <= imageCount; i++) { 
         const option = document.createElement('option');
-        option.value = i;
-        option.textContent = `# ${i} : ${imageTitles[i - 1]}`;  // i-1 because arrays are 0-indexed
+        option.value = i + 1;  // Adjusted to account for the splash page
+        option.textContent = `# ${i} : ${imageTitles[i-1]}`; // Use i-1 for correct title
         dropdown.appendChild(option);
     }
 }
+
+
+
+
+
 
 
 // Handle the Previous and Next buttons
@@ -119,6 +134,9 @@ document.getElementById('imageDropdown').addEventListener('change', function() {
     currentImage = parseInt(this.value);
     updateImage();
 });
+
+
+
 
 // Initial setup
 window.onload = function() {
