@@ -14,35 +14,34 @@
 
 <body class="font-abhaya">
 
-    <!-- Header Section -->
-    <header class="flex flex-col items-center justify-center border-b-2 border-black pb-2">
+    <header class="flex flex-col items-center justify-center border-b-2 border-black pb-2 relative z-10">
         <a class="cursor-pointer" href="index.html">
-            <img src="./assets/logoblack.png" width="300" alt="Description of Image" class="mb-4">
+            <img src="./assets/logoblack.png" width="300" alt="Description of Image" class="items-left mb-4">
         </a>
+        <div class="navigation flex items-center justify-center">
+            <button id="prevBtn" class="mr-16 text-2xl hover:font-bold hover:underline transition ease-in duration-300">Previous</button>
+
+            <aside class="w-96 max-w-1/4 mb-4 border-2 border-black">
+                <select id="imageDropdown" class="p-4 w-full text-2xl">
+                </select>
+            </aside>
+
+            <button id="nextBtn" class="ml-16 text-2xl hover:font-bold hover:underline transition ease-in duration-300">Next</button>
+        </div>
     </header>    
 
-    <main class="m-12 flex justify-center items-center">
+    <main class="mx-auto flex justify-center items-center">
 
-        <div class="container">
-            <aside class="sidebar">
-                <!-- This will be populated with page numbers and titles using JS -->
-            </aside>
-    
-            <div class="slideshow">
-                <img src="" alt="Slideshow Image" id="slideshowImage" class="">
-    
-                <div class="navigation">
-                    <button id="prevBtn" class="">Previous</button>
-                    <button id="nextBtn" class="">Next</button>
-                </div>
+        <div class="container flex">    
+            <div class="slideshow -my-32 z-0">
+                <img src="" alt="Slideshow Image" id="slideshowImage" class="relative z-0">
             </div>
         </div>
     
 
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t-2 border-black pb-2">
+    <footer class="border-t-2 border-black pb-2 z-10 relative">
         <p class="text-center mt-10">© 2023 by Martin Littlewolf</p>
     </footer>
     <script src="./assets/script.js"></script>
