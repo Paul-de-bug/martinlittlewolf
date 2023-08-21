@@ -12,6 +12,7 @@ module.exports = {
       },
       colors: {
         customGray: '#A5BABF',
+        customGold: '#FFD700',
       }
     },
   },
