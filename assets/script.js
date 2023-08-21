@@ -121,12 +121,13 @@ document.getElementById('prevBtn').onclick = function() {
 };
 
 document.getElementById('nextBtn').onclick = function() {
-    if (currentImage < imageCount) {
+    if (currentImage < imageCount + 1) { // +1 to account for the splash page
         currentImage++;
         updateImage();
         // Update dropdown value
         document.getElementById('imageDropdown').value = currentImage;
     }
+    
 };
 
 // Update the image when a new dropdown option is selected
