@@ -1,6 +1,7 @@
 const imageCount = 72 // Total number of images
 let currentImage = 1;  // Start from the second image
 
+
 const imageTitles = [
     "Annunciation to Mary",
     "Mary's Reply",
@@ -82,6 +83,14 @@ const imageTitles = [
 function updateImage() {
     const imgElement = document.getElementById('slideshowImage');
     imgElement.src = `./assets/Solutions/${currentImage}.png`; 
+
+    var printerIcon = document.getElementById("printIcon")
+if (currentImage === 1) {
+    printerIcon.classList.add("hidden");
+} else {
+    printerIcon.classList.remove("hidden");
+}
+
 }
 
 
@@ -102,9 +111,8 @@ function populateDropdown() {
         option.textContent = `# ${i} : ${imageTitles[i-1]}`; // Use i-1 for correct title
         dropdown.appendChild(option);
     }
+   
 }
-
-
 
 
 
@@ -138,7 +146,6 @@ document.getElementById('imageDropdown').addEventListener('change', function() {
 
 
 
-
 // Initial setup
 window.onload = function() {
     populateDropdown();
@@ -146,6 +153,7 @@ window.onload = function() {
 };
 
 // Print setup
+
 function printCurrentImage() {
     const imageSrc = document.getElementById('slideshowImage').src;
 
