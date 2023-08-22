@@ -84,7 +84,7 @@ function updateImage() {
     const imgElement = document.getElementById('slideshowImage');
     imgElement.src = `./assets/Solutions/${currentImage}.png`; 
 
-    var printerIcon = document.getElementById("printIcon")
+    const printerIcon = document.getElementById("printIcon")
 if (currentImage === 1) {
     printerIcon.classList.add("hidden");
 } else {
