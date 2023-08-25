@@ -1,2 +1,9 @@
 
-  
+#mc_embed_signup label,
+#mc_embed_signup input,
+#mc-embedded-subscribe-form {
+    margin: 0 !important;
+}
+#mc-embedded-subscribe {
+    width: 50%!important;
+}

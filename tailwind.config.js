@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         customGray: '#A5BABF',
         customGold: '#FFD700',
+        lightGray: '#ABB0B2'
       }
     },
   },
