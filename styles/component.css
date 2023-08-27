@@ -1,9 +1,146 @@
 
-#mc_embed_signup label,
-#mc_embed_signup input,
-#mc-embedded-subscribe-form {
-    margin: 0 !important;
+p {
+   @apply text-xl;
 }
-#mc-embedded-subscribe {
-    width: 50%!important;
+.ff-powered-img {
+    @apply invisible hidden;
+}
+.ff-title {
+    @apply text-3xl font-bold text-center;
+}
+.ff-qs-html-text{
+    @apply text-xl font-bold;
+}
+.ff-required {
+    @apply hidden;
+}
+#Widget1269144758 {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    text-indent: 2%;
+    border: 1px solid #ABB0B2;
+    border-radius: 3px;
+    @apply mb-4;
+}
+
+.ff-button-bar{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 96%;
+    align-items: center;
+    clear: both;
+}
+
+#ff-submit-root{
+    border: 1px solid #ABB0B2;
+    border-radius: 3px;
+    @apply bg-customGray rounded items-center leading-tight h-16 text-xl text-center justify-center flex py-2 bg-customGray hover:bg-gray-300 border border-lightGray transition ease-in duration-300;
+}
+#ff-submit-root span {
+    @apply text-xl;
+}
+.ff-submit-icon {
+    @apply hidden invisible;
+}
+ .btn {
+    @apply hidden invisible;
+}
+#ff-submit-root {
+    @apply visible;
+}
+
+.mdViewer,
+.ff-title {
+    @apply hidden invisible;
+}
+@media (mid-width: 768px){
+.ff-compose  .ff-form .ff-layout-default {
+    @apply p-0;
+}
+}
+.ff-form {
+    padding: 0px!important;
+    text-align:center!important;
+}
+.ff-submit {
+    @apply w-full;
+}
+.ff-button-bar {
+    display: block;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    align-items: center;
+    clear: both;
+    @apply mr-4;
+}
+#Widget1269144758 {
+    @apply w-full text-xl mt-6;
+}
+.ff-success {
+    height: 100px!important;
+    @apply text-xl mt-6 font-bold;
+    @apply max-w-md;
+}
+.ff-editwidget{
+    display: none!important;
+}
+
+/* Basic styles for the hidden class */
+.hidden {
+    display: none;
+}
+
+/* Widget Button styles
+#widgetButton {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000;
+    @apply rounded-full items-center leading-tight h-16 text-2xl text-center justify-center flex py-2 bg-customGold hover:bg-gray-300 border-2 border-black transition ease-in duration-300 font-bold;
+}*/
+
+/* Popup styles */
+#popupContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    z-index: 999;
+    @apply border border-black;
+}
+#closePopup {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    @apply bg-customGray;
+}
+#closePopup:hover,
+#closebutton:hover {
+    background-color: #ccc;
+}
+#closebutton {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    position:absolute;
+    z-index: 1;
+    top: 70%;
+
+}
+#ff-submit-root {
+    position: relative;
+    z-index: 2;
+}
+.hiddenbutton {
+    display: none!important;
 }

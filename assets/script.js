@@ -1,3 +1,4 @@
+
 const imageCount = 72 // Total number of images
 let currentImage = 1;  // Start from the second image
 
@@ -168,4 +169,34 @@ function printCurrentImage() {
         printWindow.print();
     }, 500);
 }
+
+document.getElementById("customForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var formData = new FormData(event.target);
+    var googleFormURL = event.target.action;
+    
+    fetch(googleFormURL, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'  // Important since Google Forms doesn't support CORS
+    })
+    .then(response => {
+        // Hide the form
+        document.getElementById("customForm").style.display = "none";
+        
+        // Display a thank you message
+        var thankYouMsg = document.createElement("p");
+        thankYouMsg.innerHTML = "Thank you for submitting!";
+        document.getElementById("customFormContainer").appendChild(thankYouMsg);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+
+document.getElementById('closePopup').addEventListener('click', function() {
+    var popup = document.getElementById('popupContainer');
+    popup.classList.add('hidden');
+});
 

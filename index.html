@@ -16,6 +16,7 @@
 <body class="font-abhaya">
 
     <header class="flex flex-col items-center justify-center border-b-2 border-black pb-2">
+        <div class="flex rounded-full items-center leading-tight h-16 text-2xl text-center justify-center py-2 bg-customGold hover:bg-gray-300 border-2 border-black transition ease-in duration-300 font-bold mt-8 w-1/6 absolute top-4 right-4" id="widgetButton">Free Puzzles</div>
         <a class="cursor-pointer" href="index.html">
             <img src="./assets/logoblack.png" width="300" alt="Description of Image" class="mb-4">
         </a>
@@ -23,7 +24,7 @@
 
     <main class="m-12 flex justify-center items-center">
 
-        <div class="myclass md:flex">
+        <div class="md:flex">
             <div class="w-full md:w-1/2">
             
                 <section class="pb-2">
@@ -52,59 +53,108 @@
 
     </main>
 
-    <main class="m-12 flex justify-center items-center border-black border-t-2">
+<!-- Widget Button -->
+ <!-- <div class="hidden" id="widgetButton">Free Puzzles</div> -->
 
-            <div class="myclass md:flex">
+<!-- Overlay -->
+<div id="overlay" class="hidden fixed inset-0 bg-black opacity-50 z-10"></div>
+
+<!-- Popup Container -->
+<div id="popupContainer" class="hidden">
+
+    <div id="closePopup" class="font-bold hover:bg-gray-300 border border-lightGray cursor-pointer absolute text-4xl top-4 right-4">&times;</div>
+
+    <form>
+        <main class="m-12 flex justify-center items-center">
+
+            <div class="md:flex">
+               
+    
+                <div class="md:ml-12 w-full md:w-1/2">
+              
+                    <section class="max-w-xl mt-8 md:mt-12">
+                        <h2 class="text-3xl font-bold text-center mb-4">Free Puzzles</h2>
+                        <p class="text-xl mb-4">Would you like some free puzzles? By signing up to my newsletter you'll get a PDF with 50 word search puzzles for free - which you can print at home. You'll also keep informed about any new book I release. And that's the only time I will send you a mail. You have my no spam guarantee. And of course you can unsubscribe at any time. </p>
+                    </section>
+    
+          
+                    <section class="">
+                        <p class="flex items-center justify-between w-full">                
+                            <span class="w-full mr-4 p-0 justify-left"> <div id="ff-compose"></div></span>
+                        </p>
+                    </section>
+
+                    <section class="flex justify-center">
+                        <p class="flex items-center">                
+                            <h2 id="closebutton" class="cursor-pointer text-xl font-bold text-center justify-center items-center mb-4 bg-customGray w-1/6 rounded-full hover:bg-gray-300 border border-lightGray">CLOSE</h2>
+                        </p>
+                    </section>
+
+                </div>
+    
                 <div class="w-full md:w-1/2">
                 
                     <section class="pb-2">
                         <img src="./assets/Jesusbook.png" width="600" alt="Description of Image" class="mb-4">
                     </section>
+                </div>
+    
             </div>
+    
+        </main>
+    </form>
+</div>
 
-            <div class="md:ml-12 w-full md:w-1/2">
-                <section class="max-w-xl mt-8 md:mt-12">
-                    
-                    <h2 class="text-3xl font-bold text-center mb-4">Free Puzzles</h2>
-                    <p class="text-xl">Would you like some free puzzles? By signing up to my newsletter you'll get a file containing 200 word search puzzles that you can print out at home. I'll only use your email to let you know about my new books and, of course, you can unsubscribe at any time. I've made the unsubscribe button very big on the email to make it easy. I don't want to pester anyone. But if you'd like to keep informed about my new books and would like some free puzzles submit your email below.</p>
-           
-
-                    <div id="mc_embed_shell">
-                        <div class="">
-                        <div id="mc_embed_signup">
-                            <form action="https://martinlittlewolf.us21.list-manage.com/subscribe/post?u=58f2321490a88ee9fd30d54e9&amp;id=c0e6c05ce3&amp;f_id=00d7dee6f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
-                                <div id="mc_embed_signup_scroll"><h2>Subscribe</h2>
-                                    <div class="mc-field-group"><label for="mce-EMAIL">Email Address</label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
-                                <div id="mce-responses" class="clear foot">
-                                    <div class="response" id="mce-error-response" style="display: none;"></div>
-                                    <div class="response" id="mce-success-response" style="display: none;"></div>
-                                </div>
-                            <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                                /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
-                                <input type="text" name="b_58f2321490a88ee9fd30d54e9_c0e6c05ce3" tabindex="-1" value="">
-                            </div>
-                                <div class="optionalParent">
-                                    <div class="clear foot">
-                                        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="items-center leading-tight h-16 text-xl text-center justify-center flex py-2 bg-customGray border border-black hover:bg-gray-300 transition ease-in duration-300 w-12" value="Subscribe">
-                                        <p style="margin: 0px auto;"><a href="http://eepurl.com/iyq51w" title="Mailchimp - email marketing made easy and fun">
-                                            <span style="display: inline-block; background-color: transparent; border-radius: 4px;"></span></a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                        </div>
-                        </div>
-                    </div>
-                
-                </section>
-            </div>
-
-    </main>
 
     <footer class="border-t-2 border-black pb-2">
+       <!-- <div class="flex rounded-full items-center leading-tight h-16 text-2xl text-center justify-center py-2 bg-customGold hover:bg-gray-300 border-2 border-black transition ease-in duration-300 font-bold w-1/6 mx-auto mt-8" id="widgetButton">Free Puzzles</div>-->
         <p class="text-center mt-10">© 2023 by Martin Littlewolf</p>
     </footer>
     <script src="./assets/script.js"></script>
+
+    <script async defer src="https://formfacade.com/include/111091234421743702315/form/1FAIpQLSe_3JHQt3jqD5AAh1LyLTQ6Le2gCXJdj20hgW2DxfyrDm9pkw/clean.js?div=ff-compose"></script>
+
+    <script>
+               document.getElementById('widgetButton').addEventListener('click', function() {
+                    var popup = document.getElementById('popupContainer');
+                    var overlay = document.getElementById('overlay');
+                    if (popup.classList.contains('hidden')) {
+                        popup.classList.remove('hidden');
+                        overlay.classList.remove('hidden'); // show the overlay
+                    } else {
+                        popup.classList.add('hidden');
+                        overlay.classList.add('hidden'); // hide the overlay
+                    }
+                });
+
+
+                document.getElementById('closePopup').addEventListener('click', function() {
+                    var popup = document.getElementById('popupContainer');
+                    var overlay = document.getElementById('overlay');
+                    popup.classList.add('hidden');
+                    overlay.classList.add('hidden'); // hide the overlay
+                });
+
+                document.getElementById('closebutton').addEventListener('click', function() {
+                    var popup = document.getElementById('popupContainer');
+                    var widget = document.getElementById('widgetButton');
+                    var overlay = document.getElementById('overlay');
+                    popup.classList.add('hiddenbutton');
+                    widget.classList.add('hiddenbutton');
+                    overlay.classList.add('hidden');
+                });
+
+                document.getElementById('overlay').addEventListener('click', function() {
+                    var popup = document.getElementById('popupContainer');
+                    var overlay = document.getElementById('overlay');
+                    popup.classList.add('hidden');
+                    overlay.classList.add('hidden');
+});
+
+
+
+    </script>
+   
 </body>
 
 </html>
