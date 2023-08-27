@@ -10,11 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap" rel="stylesheet">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
 </head>
 
 <body class="font-abhaya">
 
     <header class="flex flex-col items-center justify-center border-b-2 border-black pb-2">
+       <!--<div class="flex rounded-full items-center leading-tight h-16 text-2xl text-center justify-center py-2 bg-customGold hover:bg-gray-300 border-2 border-black transition ease-in duration-300 font-bold mt-8 w-1/6 absolute top-4 right-4" id="widgetButton">Free Puzzles</div>-->
         <a class="cursor-pointer" href="index.html">
             <img src="./assets/logoblack.png" width="300" alt="Description of Image" class="mb-4">
         </a>
@@ -22,7 +24,7 @@
 
     <main class="m-12 flex justify-center items-center">
 
-        <div class="myclass md:flex">
+        <div class="md:flex">
             <div class="w-full md:w-1/2">
             
                 <section class="pb-2">
@@ -41,8 +43,8 @@
                 <section class="mt-12 md:mt-24">
                     <h2 class="text-center pb-2 text-2xl font-bold mb-4">Solutions</h2>
                     <p class="flex items-center justify-between w-full">                
-                        <span class="w-1/2 mr-4"><a href="./assets/The Life of Jesus - Solutions.pdf" class="items-center leading-tight h-16 text-xl text-center justify-center flex py-2 bg-customGray border border-black hover:bg-gray-300 transition ease-in duration-300" download>Download PDF</a></span>
-                        <span class="w-1/2"><a href="/solutions.html" target="_blank" class="items-center leading-tight h-16 text-xl text-center justify-center flex py-2 bg-customGray border border-black hover:bg-gray-300 transition ease-in duration-300">View Solutions</a></span>
+                        <span class="w-1/2 mr-4"><a href="./assets/The Life of Jesus - Solutions.pdf" class="rounded items-center leading-tight h-16 text-xl text-center justify-center flex py-2 bg-customGray hover:bg-gray-300 border border-lightGray transition ease-in duration-300" download>Download PDF</a></span>
+                        <span class="w-1/2"><a href="/solutions.html" target="_blank" class="rounded items-center leading-tight h-16 text-xl text-center justify-center flex py-2 bg-customGray hover:bg-gray-300 border border-lightGray transition ease-in duration-300">View Solutions</a></span>
                     </p>
                 </section>
             </div>
@@ -51,10 +53,108 @@
 
     </main>
 
+<!-- Widget Button -->
+ <!-- <div class="hidden" id="widgetButton">Free Puzzles</div> -->
+
+<!-- Overlay -->
+<div id="overlay" class="hidden fixed inset-0 bg-black opacity-50 z-10"></div>
+
+<!-- Popup Container -->
+<div id="popupContainer" class="hidden">
+
+    <div id="closePopup" class="font-bold hover:bg-gray-300 border border-lightGray cursor-pointer absolute text-4xl top-4 right-4">&times;</div>
+
+    <form>
+        <main class="m-12 flex justify-center items-center">
+
+            <div class="md:flex">
+               
+    
+                <div class="md:ml-12 w-full md:w-1/2">
+              
+                    <section class="max-w-xl mt-8 md:mt-12">
+                        <h2 class="text-3xl font-bold text-center mb-4">Free Puzzles</h2>
+                        <p class="text-xl mb-4">Would you like some free puzzles? By signing up to my newsletter you'll get a PDF with 50 word search puzzles for free - which you can print at home. You'll also keep informed about any new book I release. And that's the only time I will send you a mail. You have my no spam guarantee. And of course you can unsubscribe at any time. </p>
+                    </section>
+    
+          
+                    <section class="">
+                        <p class="flex items-center justify-between w-full">                
+                            <span class="w-full mr-4 p-0 justify-left"> <div id="ff-compose"></div></span>
+                        </p>
+                    </section>
+
+                    <section class="flex justify-center">
+                        <p class="flex items-center">                
+                            <h2 id="closebutton" class="cursor-pointer text-xl font-bold text-center justify-center items-center mb-4 bg-customGray w-1/6 rounded-full hover:bg-gray-300 border border-lightGray">CLOSE</h2>
+                        </p>
+                    </section>
+
+                </div>
+    
+                <div class="w-full md:w-1/2">
+                
+                    <section class="pb-2">
+                        <img src="./assets/Jesusbook.png" width="600" alt="Description of Image" class="mb-4">
+                    </section>
+                </div>
+    
+            </div>
+    
+        </main>
+    </form>
+</div>
+
+
     <footer class="border-t-2 border-black pb-2">
+       <!-- <div class="flex rounded-full items-center leading-tight h-16 text-2xl text-center justify-center py-2 bg-customGold hover:bg-gray-300 border-2 border-black transition ease-in duration-300 font-bold w-1/6 mx-auto mt-8" id="widgetButton">Free Puzzles</div>-->
         <p class="text-center mt-10">© 2023 by Martin Littlewolf</p>
     </footer>
     <script src="./assets/script.js"></script>
+
+    <script async defer src="https://formfacade.com/include/111091234421743702315/form/1FAIpQLSe_3JHQt3jqD5AAh1LyLTQ6Le2gCXJdj20hgW2DxfyrDm9pkw/clean.js?div=ff-compose"></script>
+
+    <script>
+               document.getElementById('widgetButton').addEventListener('click', function() {
+                    var popup = document.getElementById('popupContainer');
+                    var overlay = document.getElementById('overlay');
+                    if (popup.classList.contains('hidden')) {
+                        popup.classList.remove('hidden');
+                        overlay.classList.remove('hidden'); // show the overlay
+                    } else {
+                        popup.classList.add('hidden');
+                        overlay.classList.add('hidden'); // hide the overlay
+                    }
+                });
+
+
+                document.getElementById('closePopup').addEventListener('click', function() {
+                    var popup = document.getElementById('popupContainer');
+                    var overlay = document.getElementById('overlay');
+                    popup.classList.add('hidden');
+                    overlay.classList.add('hidden'); // hide the overlay
+                });
+
+                document.getElementById('closebutton').addEventListener('click', function() {
+                    var popup = document.getElementById('popupContainer');
+                    var widget = document.getElementById('widgetButton');
+                    var overlay = document.getElementById('overlay');
+                    popup.classList.add('hiddenbutton');
+                    widget.classList.add('hiddenbutton');
+                    overlay.classList.add('hidden');
+                });
+
+                document.getElementById('overlay').addEventListener('click', function() {
+                    var popup = document.getElementById('popupContainer');
+                    var overlay = document.getElementById('overlay');
+                    popup.classList.add('hidden');
+                    overlay.classList.add('hidden');
+});
+
+
+
+    </script>
+   
 </body>
 
 </html>
