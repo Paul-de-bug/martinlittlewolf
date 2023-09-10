@@ -151,35 +151,9 @@
                     overlay.classList.add('hidden');
 });
 
-
-
-    // REPLACE WITH YOUR URLS FROM JSONStorage.net
-    const FETCH_URL = "https://api.jsonstorage.net/v1/json/6bef7936-378c-479f-8b30-d5abe73ce9a7/ae43d4b6-0ad0-4757-8b43-8cbb5ec8c6c8?apiKey=%your api key%";
-    const UPDATE_URL = "https://api.jsonstorage.net/v1/json/6bef7936-378c-479f-8b30-d5abe73ce9a7/ae43d4b6-0ad0-4757-8b43-8cbb5ec8c6c8?apiKey=%your api key%";
-
-    // Fetch current count and increment it
-    fetch(FETCH_URL)
-        .then(response => response.json())
-        .then(data => {
-            let currentCount = data.count;
-
-            // Increment the count
-            return fetch(UPDATE_URL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ count: currentCount + 1 })
-            });
-        })
-        .catch(error => {
-            console.error("Error updating counter:", error);
-        });
-
-
-
     </script>
-   
+   <script data-goatcounter="https://martinlittlewolf.goatcounter.com/count"
+   async src="//gc.zgo.at/count.js"></script>
 </body>
 
 </html>
