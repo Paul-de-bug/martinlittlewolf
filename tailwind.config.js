@@ -13,7 +13,8 @@ module.exports = {
       colors: {
         customGray: '#A5BABF',
         customGold: '#FFD700',
-        lightGray: '#ABB0B2'
+        lightGray: '#ABB0B2',
+        themeBlue: '#414b77'
       }
     },
   },
