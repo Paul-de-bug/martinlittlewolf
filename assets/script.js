@@ -1,12 +1,12 @@
 
-const imageCount = 201 // Total number of images
+const imageCount = 110 // Total number of images
 let currentImage = 1;  // Start from the second image
 
 
 // Function to update the displayed image
 function updateImage() {
     const imgElement = document.getElementById('slideshowImage');
-    imgElement.src = `./assets/Solutions/${currentImage}.png`; 
+    imgElement.src = `./assets/Solutions - 5000/${currentImage}.png`; 
 
     const printerIcon = document.getElementById("printIcon")
 if (currentImage === 1) {
