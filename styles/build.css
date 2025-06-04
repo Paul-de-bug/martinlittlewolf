@@ -795,7 +795,7 @@ video {
 
 .border-lightGray {
   --tw-border-opacity: 1;
-  border-color: rgb(171 176 178 / var(--tw-border-opacity));
+  border-color: rgb(193 193 193 / var(--tw-border-opacity));
 }
 
 .bg-black {
@@ -883,11 +883,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-9xl {
-  font-size: 8rem;
-  line-height: 1;
 }
 
 .font-bold {
@@ -983,7 +978,7 @@ p {
   border-radius: 0.25rem;
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(171 176 178 / var(--tw-border-opacity));
+  border-color: rgb(193 193 193 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(165 186 191 / var(--tw-bg-opacity));
   padding-top: 0.5rem;

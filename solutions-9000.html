@@ -19,11 +19,13 @@
         <a class="cursor-pointer" href="index.html">
             <img src="./assets/logoblack.png" width="300" alt="Description of Image" class="mb-4">
         </a>
-        <div class="navigation flex flex-col-4 -mt-12 w-full">
+        <div class="navigation flex flex-col-4 -mt-12 w-full relative">
 
-            <button id="prevBtn" class="hidden md:block text-3xl md:mr-16 mr-4 hover:font-bold hover:underline transition ease-in duration-300 w-1/4">Previous</button>
+            <a href="solutions-9000-splash.html"><button class="text-3xl md:mr-16 mr-4 hover:font-bold hover:underline transition ease-in duration-300 w-1/4 absolute top-4 items-center"> <span style="vertical-align: middle;">&larr;</span><span>Back</span></button></a>
+      
+            <button id="prevBtn" class="hidden text-3xl md:mr-16 mr-4 hover:font-bold hover:underline transition ease-in duration-300 w-1/4">Previous</button>
 
-            <aside class="relative w-full mb-4 mx-4 border border-black justify-center md:w-2/4">
+            <aside class="relative w-full mb-4 mx-auto border border-black justify-center md:w-2/4">
                 <select id="imageDropdown" class="appearance-none bg-customGray p-4 pr-12 w-full text-2xl md:text-3xl hover:bg-gray-300 transition ease-in duration-300 cursor-pointer outline-none">
                 </select>
                 <div class="absolute top-1/2 right-4 transform -translate-y-1/2">
@@ -31,7 +33,7 @@
                 </div>
             </aside>
 
-            <button id="nextBtn" class="hidden md:block text-3xl md:ml-16 ml-4 hover:font-bold hover:underline transition ease-in duration-300 w-1/4">Next</button>
+            <button id="nextBtn" class="hidden text-3xl md:ml-16 ml-4 hover:font-bold hover:underline transition ease-in duration-300 w-1/4">Next</button>
         </div>
        
     </header>    

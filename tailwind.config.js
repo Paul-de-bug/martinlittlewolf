@@ -14,7 +14,8 @@ module.exports = {
         customGray: '#A5BABF',
         customGold: '#FFD700',
         lightGray: '#ABB0B2',
-        themeBlue: '#414b77'
+        themeBlue: '#414b77',
+        lightGray: '#c1c1c1'
       }
     },
   },
