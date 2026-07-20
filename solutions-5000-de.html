@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lösungen – 5000 Wörter</title>
+    <link rel="stylesheet" href="./styles/build.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-abhaya">
+
+    <header class="flex flex-col items-center justify-center border-b-2 border-black pb-2 relative z-10">
+        <a class="cursor-pointer" href="index.html" aria-label="Zur Startseite">
+            <img src="./assets/logoblack.png" width="300" alt="Martin Littlewolf" class="mb-4">
+        </a>
+
+        <div class="navigation flex flex-col-4 -mt-12 w-full">
+            <button id="prevBtn" class="hidden md:block text-3xl md:mr-16 mr-4 hover:font-bold hover:underline transition ease-in duration-300 w-1/4">Zurück</button>
+
+            <aside class="relative w-full mb-4 mx-4 border border-black justify-center md:w-2/4">
+                <select id="imageDropdown" aria-label="Rätsel auswählen" class="appearance-none bg-customGray p-4 pr-12 w-full text-2xl md:text-3xl hover:bg-gray-300 transition ease-in duration-300 cursor-pointer outline-none">
+                </select>
+                <div class="absolute top-1/2 right-4 transform -translate-y-1/2">
+                    <img src="./assets/dropdown-svgrepo-com.svg" alt="" class="h-6 w-6">
+                </div>
+            </aside>
+
+            <button id="nextBtn" class="hidden md:block text-3xl md:ml-16 ml-4 hover:font-bold hover:underline transition ease-in duration-300 w-1/4">Weiter</button>
+        </div>
+    </header>
+
+    <div id="printIcon" class="hidden flex justify-center md:justify-end md:mr-10 mt-4">
+        <button type="button" onclick="printCurrentImage()" class="flex flex-col text-2xl items-center font-bold relative z-10 w-16" aria-label="Aktuelle Lösung drucken">
+            <img src="./assets/printer-svgrepo-com.svg" alt="">
+            <span>DRUCKEN</span>
+        </button>
+    </div>
+
+    <main class="mx-auto flex justify-center items-center">
+        <div class="container flex">
+            <div class="slideshow -my-12 md:-my-48 lg:-my-56 z-0 mx-auto">
+                <img src="" alt="" id="slideshowImage" class="relative z-0">
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t-2 border-black pb-2 z-10 relative mt-8">
+        <p class="text-center mt-10">© 2023 Martin Littlewolf</p>
+    </footer>
+
+    <script>
+        const imageCount = 224;
+        let currentImage = 0;
+
+        function updateImage() {
+            const imgElement = document.getElementById("slideshowImage");
+            const printerIcon = document.getElementById("printIcon");
+
+            if (currentImage === 0) {
+                imgElement.src = "./assets/german5000slide.png";
+                imgElement.alt = "Das große Buch der Wortsuchrätsel";
+                printerIcon.classList.add("hidden");
+            } else {
+                imgElement.src = `./assets/Solutions - 5000 German/${currentImage}.svg`;
+                imgElement.alt = `Lösung zu Rätsel ${currentImage}`;
+                printerIcon.classList.remove("hidden");
+            }
+        }
+
+        function populateDropdown() {
+            const dropdown = document.getElementById("imageDropdown");
+            const defaultOption = document.createElement("option");
+
+            defaultOption.value = 0;
+            defaultOption.textContent = "Rätsel auswählen";
+            defaultOption.selected = true;
+            dropdown.appendChild(defaultOption);
+
+            for (let i = 1; i <= imageCount; i++) {
+                const option = document.createElement("option");
+                option.value = i;
+                option.textContent = `Rätsel ${i}`;
+                dropdown.appendChild(option);
+            }
+        }
+
+        document.getElementById("prevBtn").addEventListener("click", function () {
+            if (currentImage > 1) {
+                currentImage--;
+                updateImage();
+                document.getElementById("imageDropdown").value = currentImage;
+            }
+        });
+
+        document.getElementById("nextBtn").addEventListener("click", function () {
+            if (currentImage < imageCount) {
+                currentImage++;
+                updateImage();
+                document.getElementById("imageDropdown").value = currentImage;
+            }
+        });
+
+        document.getElementById("imageDropdown").addEventListener("change", function () {
+            currentImage = Number.parseInt(this.value, 10);
+            updateImage();
+        });
+
+        window.addEventListener("load", function () {
+            populateDropdown();
+            updateImage();
+        });
+
+        function printCurrentImage() {
+            const imageSrc = document.getElementById("slideshowImage").src;
+            const printWindow = window.open("", "_blank");
+
+            if (!printWindow) {
+                return;
+            }
+
+            printWindow.document.write("<!DOCTYPE html><html lang=\"de\"><head><title>Lösung drucken</title></head><body>");
+            printWindow.document.write("<img src=\"" + imageSrc + "\" alt=\"Aktuelle Lösung\" style=\"width:100%;height:auto\">");
+            printWindow.document.write("</body></html>");
+            printWindow.document.close();
+
+            setTimeout(function () {
+                printWindow.print();
+            }, 500);
+        }
+    </script>
+
+</body>
+
+</html>
