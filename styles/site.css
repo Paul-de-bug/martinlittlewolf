@@ -907,22 +907,6 @@ video {
   outline-offset: 2px;
 }
 
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.duration-300 {
-  transition-duration: 300ms;
-}
-
-.ease-in {
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-}
-
 p {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -934,16 +918,24 @@ p {
   display: none;
 }
 
-.hover\:bg-gray-300:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+/* Interactive behavior retained from the live site without Tailwind. */
+
+.site-button,
+.solution-select,
+.text-button {
+  cursor: pointer;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
-.hover\:font-bold:hover {
+.site-button:hover,
+.solution-select:hover {
+  background-color: rgb(209 213 219);
+}
+
+.text-button:hover {
   font-weight: 700;
-}
-
-.hover\:underline:hover {
   text-decoration-line: underline;
 }
 
@@ -997,4 +989,3 @@ p {
     line-height: 2.25rem;
   }
 }
-
